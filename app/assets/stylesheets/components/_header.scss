@@ -1,6 +1,12 @@
 .header {
   margin-bottom: 40px;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.ingredient-block {
+  margin-top: 22px;
+  margin-bottom: 11px;
+}
+
+.right-block {
+  text-align: right;
 }

@@ -1,5 +1,5 @@
-<div class="search-bar">
-  <%= simple_form_for @dose, url: byingredient_cocktails_path do |f|%>
+<div class="ingredient-block">
+  <%= simple_form_for @dose, url: byingredient_cocktails_path, html: {class: 'form-inline right-block' } do |f|%>
     <%= f.association :ingredient, label: false, prompt: "Choose by ingredient" %>
     <%= f.submit "Go", class: "btn btn-success" %>
   <% end %>
