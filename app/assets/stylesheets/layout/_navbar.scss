@@ -1,8 +1,9 @@
 /* Main class */
 .navbar-wagon {
+  opacity: 1;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: $gray;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   display: flex;
   height: 70px;
   padding: 0px 30px;
@@ -31,6 +32,12 @@
   justify-content: space-between;
 }
 
+.fa-white {
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
 /* Navbar item */
 .navbar-wagon-item {
   flex: 0 1 auto;
@@ -50,7 +57,6 @@
 
 /* Navbar right button */
 .navbar-wagon-button {
-  margin-left: 10px;
   padding: 0 20px;
   border-radius: 20em;
   line-height: 40px;
@@ -84,19 +90,20 @@
   z-index: 1;
 }
 .navbar-wagon-search-input {
+  min-width: 200px;
   flex: 0 1 300px;
   transition: all 0.15s ease;
   line-height: 40px;
   font-weight: lighter;
   color: #666666;
   border: 1px solid #E6E6E6;
-  border-radius: 5px;
-  padding: 0 10px;
+  border-radius: 20px;
+  padding: 0 20px;
   font-size: 14px;
   outline: none;
 }
 .navbar-wagon-search-input:focus  {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #red;
 }
 
 /* Navbar dropdown menu */
@@ -104,6 +111,7 @@
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
+  border-radius: 5px;
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;

@@ -13,7 +13,7 @@ $headings-font-family:    $header-font;
 // Semantic color scheme
 // => http://getbootstrap.com/customize/#colors
 $gray-base:       $gray;
-$brand-primary:   $green;
+$brand-primary:   $blue;
 $brand-success:   $green;
 $brand-info:      $yellow;
 $brand-danger:    $red;
@@ -25,3 +25,6 @@ $border-radius-large: 20px;
 $border-radius-small: 20px;
 
 $link-hover-decoration: none;
+$input-border-focus: $red;
+
+$input-height-base: 44px;

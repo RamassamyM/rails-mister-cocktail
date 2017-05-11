@@ -8,6 +8,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.banner-high {
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+}
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
@@ -19,3 +28,26 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
+
+#logo-banner {
+  max-width: 300px;
+  width: 100%;
+}
+
+.banner-tag {
+  margin-bottom: 20px;
+  h1 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 1024px) {
+  .banner-high {
+    padding: 50px;
+  }
+  .banner-tag {
+    h1 {
+    font-size: 32px;
+    }
+  }
+}
+

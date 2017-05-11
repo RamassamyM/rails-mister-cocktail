@@ -1,0 +1,19 @@
+<div class="banner banner-high" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1000/400/abstract/6');">
+  <div class="container">
+    <div class="row">
+      <div class="colxs-12">
+        <div class="banner-logo">
+          <%= image_tag "logo.png", id: "logo-banner" %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="banner-tag">
+          <h1>The best place to discover and share cocktail recipes</h1>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <%= link_to t(".top_call_to_action", default: "Share a cocktail"), new_cocktail_path, class: "navbar-wagon-item navbar-wagon-button btn unmarged" %>
+      </div>
+    </div>
+  </div>
+</div>
