@@ -1,0 +1,21 @@
+<div class="wrapper ">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p><%= link_to 'Back', cocktails_path, class: "btn btn-primary"%></p>
+        <div class="header">
+          <h3>Cocktails with <strong><%= @ingredient.name %></strong> ...</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-sm-6 col-md-4">
+          <%= link_to cocktail_path(cocktail) do %>
+            <%= render partial: 'card', locals: { item: cocktail } %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

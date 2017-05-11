@@ -23,3 +23,25 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+.left-marged {
+  margin-left: 10px;
+}
+
+.top-marged {
+  margin-top: 20px;
+}
+
+.distributed {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexed-left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

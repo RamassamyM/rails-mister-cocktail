@@ -1,0 +1,25 @@
+<div class="wrapper ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="header">
+          <h2>Cocktails</h2>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <%= render 'ingredient_select' %>
+      </div>
+    </div>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-sm-6 col-md-4">
+          <%= link_to cocktail_path(cocktail) do %>
+            <%= render partial: 'card', locals: { item: cocktail } %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

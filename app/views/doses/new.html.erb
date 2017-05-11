@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="header">
+        <h2>Add a new dose for : <%= @cocktail.name %></h2>
+        <%= link_to 'Back', cocktails_path, class: "btn btn-primary"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-3">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>

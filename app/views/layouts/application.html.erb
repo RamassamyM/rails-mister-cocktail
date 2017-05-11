@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <%= render 'layouts/_navbar_wagon_without_login' %>
-    <%= yield %>
+    <div class="wrapper-nav-bar"><%= render 'layouts/navbar' %></div>
+    <div class="wrapper-content"><%= yield %></div>
   </body>
 </html>
