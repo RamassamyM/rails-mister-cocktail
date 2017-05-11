@@ -26,7 +26,7 @@ class CocktailsController < ApplicationController
   end
 
   def search
-    @cocktails = Cocktail.where("name LIKE ?", "%#{search_params[:query]}%")
+    @cocktails = Cocktail.where("lower(name) LIKE ?", "%#{search_params[:query].downcase}%")
     @query = search_params
   end
 
