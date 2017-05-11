@@ -31,8 +31,12 @@ class CocktailsController < ApplicationController
   end
 
   def byingredient
-    @ingredient = Ingredient.find(ingredient_params[:ingredient_id])
-    @cocktails = @ingredient.cocktails
+    if ingredient_params[:ingredient_id].empty?
+      redirect_to cocktails_path
+    else
+      @ingredient = Ingredient.find(ingredient_params[:ingredient_id])
+      @cocktails = @ingredient.cocktails
+    end
   end
 
   private
