@@ -1,6 +1,6 @@
 
 <div class="wrapper-show">
-  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1000/200/nightlife');">
+  <div class="banner banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1000/200/nightlife');">
   </div>
 
   <div class="top-marged all-padded">
@@ -23,8 +23,10 @@
         <div class="col-sm-4 offset-sm-4">
           <% @doses.each do |dose| %>
             <div class="distributed">
-              <p><%= dose.ingredient.name %>:</p>
-              <p class="ingredient-dose"><%= dose.description %><%= link_to '🗑️', dose_path(dose), class: "left-marged", method: :delete %></p>
+              <% if dose.persisted? %>
+                <p><%= dose.ingredient.name %>:</p>
+                <p class="ingredient-dose"><%= dose.description %><%= link_to '🗑️', dose_path(dose), class: "left-marged", method: :delete %></p>
+              <% end %>
             </div>
           <% end %>
         </div>
