@@ -16,6 +16,9 @@
                 <h2><%= @cocktail.name %>
                 </h2>
               </div>
+              <% if @cocktail.photo? %>
+                <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+              <% end %>
             </div>
           </div>
         </div>

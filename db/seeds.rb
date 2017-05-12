@@ -37,6 +37,8 @@ puts "done"
 print "Seeding cocktails...."
 COCKTAILS.each do |cocktail|
   cocktail_record = Cocktail.create!(name: cocktail)
+  url = "http://lorempixel.com/800/400/abstract/#{rand(1..10)}"
+  cocktail_record.photo_url = url
   4.times do |index|
     ingredient = Ingredient.find(index + Ingredient.first.id)
     Dose.create!(description: "#{rand(1..3)} cl", cocktail_id: cocktail_record.id, ingredient_id: ingredient.id)

@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require '_navbar.js'
+//= require jquery-fileupload/basic
+//= require cloudinary/jquery.cloudinary
+//= require attachinary
 //= require_tree .

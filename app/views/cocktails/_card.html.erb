@@ -1,4 +1,11 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://lorempixel.com/400/200/abstract/<%= (1..10).to_a.sample %>');">
+<% if item.photo? %>
+  <% image_url = 'cl_image_path @item.photo.path, height: 200, width: 400, crop: :fill' %>
+<% else %>
+  <% image_url = "http://lorempixel.com/400/200/abstract/#{rand(1..10)}" %>
+<% end %>
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), 
+url('<%= cl_image_path item.photo.path, height: 200, width: 400, crop: :fill %>');">
   <div class="card-description">
       <h2><%= item.name %></h2>
   </div>

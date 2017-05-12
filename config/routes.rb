@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       post 'byingredient' => 'cocktails#byingredient'
     end
   end
+  mount Attachinary::Engine => "/attachinary"
 end
