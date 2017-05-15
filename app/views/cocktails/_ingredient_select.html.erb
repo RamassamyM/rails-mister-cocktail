@@ -1,6 +1,6 @@
 <div class="ingredient-block">
-  <%= simple_form_for @dose, url: byingredient_cocktails_path, html: {class: 'form-inline right-block' } do |f|%>
-    <%= f.association :ingredient, collection: Ingredient.order('name ASC'), label: false, prompt: "Find by ingredient", class: '#myselect' %>
+  <%= simple_form_for :search_by_ingredient, url: byingredient_cocktails_path, html: { class: 'form-inline right-block' } do |f|%>
+    <%= f.input :ingredient_id, collection: Ingredient.order('name ASC'), label: false, prompt: "Find by ingredient", class: '#myselect' %>
     <%= f.submit "Search", class: "btn btn-success" %>
   <% end %>
 </div>

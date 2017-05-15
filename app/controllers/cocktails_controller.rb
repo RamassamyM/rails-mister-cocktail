@@ -3,7 +3,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
-    @dose = Dose.new
+    # @dose = Dose.new
   end
 
   def show
@@ -35,7 +35,6 @@ class CocktailsController < ApplicationController
       redirect_to cocktails_path
     else
       @ingredient = Ingredient.find(ingredient_params[:ingredient_id])
-      @cocktails = @ingredient.cocktails
     end
   end
 
@@ -53,6 +52,6 @@ class CocktailsController < ApplicationController
       params.require(:cocktail).permit(:name, :photo)
     end
     def ingredient_params
-      params.require(:dose).permit(:ingredient_id)
+      params.require(:search_by_ingredient).permit(:ingredient_id)
     end
 end

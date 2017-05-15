@@ -13,6 +13,14 @@
   min-height: 500px;
 }
 
+#banner-fixed {
+  background-image: image-url('background.jpeg');
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -3;
+}
+
 #banner-show {
   min-height: 300px;
 }

@@ -3,22 +3,14 @@ $(document).ready(function() {
   var isCocktailIndexUrl = (window.location.pathname.toLowerCase() === "/cocktails");
 
   if (isRootUrl || isCocktailIndexUrl) {
-    $('.navbar-wagon').css('opacity', 0);
-    $('.navbar-wagon').hide();
     $(window).on("scroll", function(event) {
       var verticalPosition = $(window).scrollTop();
-      if(verticalPosition  > 400) {
+      if(verticalPosition  > 500) {
         // $('.navbar-wagon').show();
-        $('.navbar-wagon').css('opacity', 1);
+        $('.navbar-wagon').removeClass('navbar-hidden');
       }
-      if(verticalPosition  <= 400) {
-        $('.navbar-wagon').css('opacity', 0);
-      }
-      if ($('.navbar-wagon').css('opacity') === "0") {
-        $('.navbar-wagon').hide();
-      }
-      else {
-        $('.navbar-wagon').show();
+      if(verticalPosition  <= 500) {
+        $('.navbar-wagon').addClass('navbar-hidden');
       }
     });
 

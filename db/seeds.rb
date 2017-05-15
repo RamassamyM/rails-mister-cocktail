@@ -15,8 +15,23 @@ Ingredient.destroy_all
 
 
 
-# cocktails data
+#  data
 COCKTAILS = ["B52", "Tequila sunrise", "KGB", "Sex on the beach", "Mojito", "Pina Colada", "Cachaça", "Daiquiri", "Cuba libre", "Whisky sour", "Blue lagoon", "Negroni", "Bloody Mary", "Mai Tai", "Caïpirinha", "Kir", "Gin Tonic", "Irish Coffee", "Pisco sour"]
+PICTURES = [
+            "https://static.pexels.com/photos/209516/pexels-photo-209516.jpeg",
+            "https://static.pexels.com/photos/34211/cocktail-summer-party-alcohol.jpg",
+            "https://static.pexels.com/photos/34211/cocktail-summer-party-alcohol.jpg",
+            "https://static.pexels.com/photos/169391/pexels-photo-169391.jpeg",
+            "https://static.pexels.com/photos/48720/pexels-photo-48720.jpeg",
+            "https://static.pexels.com/photos/338713/pexels-photo-338713.jpeg",
+            "https://static.pexels.com/photos/128242/pexels-photo-128242.jpeg",
+            "https://static.pexels.com/photos/338627/pexels-photo-338627.jpeg",
+            "https://static.pexels.com/photos/6526/sea-beach-holiday-vacation.jpg",
+            "https://static.pexels.com/photos/209516/pexels-photo-209516.jpeg",
+            "https://static.pexels.com/photos/34211/cocktail-summer-party-alcohol.jpg",
+
+]
+
 # seeding ingredients with a web list
 
 require 'json'
@@ -35,9 +50,9 @@ puts "done"
 
 #seeding cocktails
 print "Seeding cocktails...."
-COCKTAILS.each do |cocktail|
+COCKTAILS.each_with_index do |cocktail, index|
   cocktail_record = Cocktail.create!(name: cocktail)
-  url = "http://lorempixel.com/800/400/abstract/#{rand(1..10)}"
+  url = PICTURES[index]
   cocktail_record.photo_url = url
   4.times do |index|
     ingredient = Ingredient.find(index + Ingredient.first.id)

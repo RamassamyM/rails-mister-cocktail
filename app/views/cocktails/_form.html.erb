@@ -1,11 +1,10 @@
-<%= simple_form_for @cocktail do |f|%>
+<%= simple_form_for @cocktail, class: "form-inline" do |f|%>
   <%= f.input :name %>
   <label>
-    UPLOAD
     <div class="drop-image">
       Upload an image
     </div>
-    <%= f.input :photos, as: :attachinary, label: false %>
+    <%= f.input :photo, as: :attachinary, label: false %>
   </label>
   <%= f.submit "Add a cocktail", class: "btn btn-danger", :wrapper => :nested %>
 <% end %>

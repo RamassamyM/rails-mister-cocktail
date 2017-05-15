@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="row">
-      <% @cocktails.each do |cocktail| %>
+      <% @ingredient.cocktails.each do |cocktail| %>
         <div class="col-sm-6 col-md-4">
           <%= link_to cocktail_path(cocktail) do %>
             <%= render partial: 'card', locals: { item: cocktail } %>
